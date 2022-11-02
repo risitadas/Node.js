@@ -1,0 +1,67 @@
+some npm commands must know :
+
+
+NPM --> NODE PACKAGE MANAGER
+
+
+
+1. NPM Install Command : installs a package in the package.json file in the local node_modules folder
+
+	npm install
+
+2. NPM Uninstall Command : remove a package from the package.json file and also removes the module from local node_modules folder
+
+	npm uninstall
+
+3. NPM Update Command :	updates the specified package
+
+	npm update
+
+4. NPM Global Update Command : updates action to each globally installed package
+
+	npm update -g
+
+5. NPM Deprecate Command : command will deprecate the npm registry for a package, providing a deprecation warning to all who attempt to install it
+
+	npm deprecate
+
+6. NPM Outdated Command : checks the registry if any (or specified) package is outdated, also prints them
+
+	npm outdated
+
+7. NPM Doctor Command : checks our environment so that our npm installation has what it needs to manage our JavaScript packages
+
+	npm doctor
+
+8. NPM Initialize Command : creates a package.json file in our directory, it basically asks questions and finally creates a package.json file in our current directory
+
+	npm init
+
+9. NPM Start Command : runs a command that is defined in the start property in the scripts, if not defined it will run the node server.js command
+
+	npm start
+
+10. NPM Build Command : used to build a package
+
+	npm build
+
+11. NPM List Command : lists all the packages as well as their dependencies installed
+
+	npm ls
+
+12. NPM Version Command : bumps a package version
+
+	npm version
+
+13. NPM Search Command : searches the npm registry for packages matching the search terms
+
+	npm search
+
+14. NPM Help Command : searches npm help documentation for a specified topic
+
+	npm help
+
+15. NPM Owner Command : manages ownership of published packages, it is used to manage package owners
+
+	npm owner
+
