@@ -1,2 +1,4 @@
-# nodejs
-Node.js JavaScript runtime
+# Node.js
+
+Node.js is an open-source, cross-platform JavaScript runtime environment.
+
