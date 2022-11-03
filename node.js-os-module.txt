@@ -27,4 +27,4 @@ homedir()			Returns the string path of the current user's home directory
 
 OS Syntax :
 
-var os = require('os');
+const os = require('os');
