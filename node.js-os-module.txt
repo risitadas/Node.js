@@ -21,6 +21,7 @@ totalmem()			Returns the number of total memory of the system
 type()			Returns the name of the operating system
 uptime()			Returns the uptime of the operating system, in seconds
 userInfo()			Returns information about the current user
+homedir()			Returns the string path of the current user's home directory
 
 
 
