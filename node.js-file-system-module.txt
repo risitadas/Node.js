@@ -58,7 +58,7 @@ demofile2.txt :
 This is a file demonstrating the "create files using fs.appendFile()" in Node.js File System Module
 
 					
-2. fs.open() --> this method takes a "flag" as the second argument, if the dlag is "w" for "writing",
+2. fs.open() --> this method takes a "flag" as the second argument, if the flag is "w" for "writing",
 			the specified file is opened for writing,
 			again if the file does not exist, an empty file is created
 
