@@ -1,0 +1,150 @@
+Node.js as a File Server : 
+
+
+Node.js file system module allows us to work with the file system on our computer.
+
+
+1. to access the File System module,
+
+	const fs = require('fs');
+
+
+2. common use for the File System module :
+
+	a) read files
+	b) create files
+	c) update files
+	d) delete files
+	e) rename files
+
+
+
+a) Read Files :
+
+demofile.txt
+	This is a file demonstrating the "read files" in Node.js File System Module
+
+
+fs-module-read.js
+
+	const fs = require('fs');
+
+	fs.readFile('demofile1.txt','utf-8',function(err, data){
+
+    		console.log(err, data)
+
+	})
+
+
+
+b) Create Files :
+
+the file system module has methods for creating new files :
+
+1. fs.appendFile() --> this method appends specified content to a file,
+				if the file doesn't exit, the file will be created
+
+fs-module-write.js :
+
+fs.appendFile('demofile2.txt', 'This is a file demonstrating the "create files using fs.appendFile()" in Node.js File System Module', function(err) {
+
+    if (err) throw err;
+    console.log('created!');
+});
+
+
+demofile2.txt :
+
+This is a file demonstrating the "create files using fs.appendFile()" in Node.js File System Module
+
+					
+2. fs.open() --> this method takes a "flag" as the second argument, if the flag is "w" for "writing",
+			the specified file is opened for writing,
+			again if the file does not exist, an empty file is created
+
+fs-module-write.js :
+
+fs.open('demofile3.txt', 'w', function(err, file) {
+
+    if (err) throw err;
+    console.log('created using fs.open()')
+});
+
+demofile3.txt :
+
+(blank)
+
+
+3. fs.writeFile() --> this method replaces the specified file and content if it exists,
+				again if the file does not exist, a new fie will be created
+
+fs-module-write.js
+
+fs.writeFile('demofile4.txt', 'This is a file demonstrating the "create files using fs.writeFile()" in Node.js File System Module', function(err) {
+
+    if (err) throw err;
+    console.log('created using fs.writeFile()')
+});
+
+demofile4.txt :
+
+This is a file demonstrating the "create files using fs.writeFile()" in Node.js File System Module
+
+
+c) Update Files :
+
+the File System module has methods for updating files :
+
+1. fs.appendFile() --> this method appends the specified content at the end of the specified file
+
+fs-module-update.js :
+
+fs.appendFile('demofile5.txt', 'this is me,demonstrating fs.appendFile() method for updating files,from the File System Module', function(err) {
+
+   // if (arr) throw err;
+    console.log('updated using fs.appendFile() method');
+});
+
+demofile5.txt :
+
+this is me,demonstrating fs.appendFile() method for updating files,from the File System Module
+
+
+2. fs.writeFile() --> this method replaces the specified file and content
+
+fs-module-update.js :
+
+fs.writeFile('demofile6.txt', 'this is me,demonstrating fs.writeFile() method for updating files,from the File System Module', function(err) {
+
+   // if (err) throw err;
+    console.log('updated using fs.writeFile() method');
+});
+
+demofile6.txt :
+
+this is me,demonstrating fs.writeFile() method for updating files,from the File System Module
+
+
+d) Delete Files :
+ 
+we use fs.unlink() method : this method deletes the specified file
+
+fs-module-delete.js :
+
+fs.unlink('demofile0.txt', function (err) {
+  if (err) throw err;
+  console.log('File deleted!');
+});
+
+
+e) Rename Files :
+
+to rename a file, we use fs.rename() method
+
+fs-module-rename.js :
+
+fs.rename('demofile7.txt', 'demofile7renamed.txt', function(err) {
+
+	if (err) throw err;
+	console.log("file renamed using the fs.rename() method");
+});
