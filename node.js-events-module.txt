@@ -1,0 +1,38 @@
+Events in Node.js :
+
+built-in module, called "Events",
+where we can create-, fire-, and listen for- our own events.
+
+very useful for real time event driven applications
+
+
+
+to include the built-in Events module, 
+	we use the require() method
+
+
+all event properties and methods are an instance of an EventEmitter object,
+to access these properties and methods, we create an EventEmitter object :
+
+	const events = require('events');
+	const eventEmitter = new events.EventEmitter();
+
+
+to fire an event,
+	we use the emit() method
+
+
+events-module.js
+
+const EventEmitter = require('events');
+class MyEmitter extends EventEmitter {}
+const myEmitter = new MyEmitter();
+
+myEmitter.on('event', () => {
+   console.log('an event occurred!');
+});
+
+myEmitter.emit('event');
+
+
+
