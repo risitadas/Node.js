@@ -1,0 +1,35 @@
+the built-in URL Module :
+
+the URL module splits up a web address into readable parts
+
+
+for accessing,
+	const url = require('url');	---> CommonJS module
+or,
+	import url from 'url';		---> ECMAscript module
+
+
+
+url-module.js :
+
+
+const myURL = new URL('https://example.org');
+myURL.pathname = '/a/b/c';
+myURL.search = '?d=e';
+myURL.hash = '#fgh';
+
+
+console.log(myURL)
+console.log(myURL.href)
+console.log(myURL.host)
+console.log(myURL.pathname)
+console.log(myURL.search)
+console.log(myURL.username)
+console.log(myURL.password)
+console.log(myURL.port)
+console.log(myURL.protocol)
+console.log(myURL.hash)
+console.log(myURL.origin)
+
+
+
