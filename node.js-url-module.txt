@@ -31,5 +31,5 @@ console.log(myURL.protocol)
 console.log(myURL.hash)
 console.log(myURL.origin)
 
-
+ 
 
