@@ -1,0 +1,118 @@
+the built-in HTTP Module : 
+
+this allows Node.js to transfer data over the Hyper Text Transfer Protocol (HTTP)
+
+
+--> to include the HTTP module, we use the require() method,
+	
+	const http = require('http');
+
+
+
+1. Node.js as a Web Server :
+
+the HTTP module can create an HTTP server that listens to server ports and gives a response back to the client
+
+to craete an HTTP server, we use the createServer() method, for example,
+
+	const http = require('http);
+
+	http.createServer(function(req, res) {		//creating the server object
+
+		res.write('hey, its me! ');	// write a response to the client
+		res.end(); 				// end the response
+	}).listen(8080); 				// the server object listens on port 8080
+
+
+
+2. Adding an HTTP Header : 
+
+example,
+
+	const http = require('http');
+	http.createServer(function (req, res) {
+		  res.writeHead(200, {'Content-Type': 'text/html'});
+  		  res.write('hey, its me!');
+  		  res.end();
+	}).listen(8080);
+
+
+here,
+
+the first argument of the res.writeHead() method is the status code, 200 means that all is OK,
+and the second argument is an object containing the response headers
+
+
+
+3. Reading the Query String :
+
+the function passed into the http.createServer() has a 'req' argument that represents the request from the client,
+as an object (http.IncomingMessage object),
+
+this object has a property called "url" which holds the part of the url that comes afater the domain name,
+for example,
+
+	const http = require('http');
+	http.createServer(function (req, res) {
+  		res.writeHead(200, {'Content-Type': 'text/html'});
+  		res.write(req.url);
+  		res.end();
+	}).listen(8080);
+
+
+4. Split the Query String :
+
+there are modules to easily split the query string into readable parts,
+such as the URL module
+
+for example,
+
+	const http = require('http');
+	const url = require('url');
+
+	http.createServer(function (req, res) {
+  		res.writeHead(200, {'Content-Type': 'text/html'});
+  		const q = url.parse(req.url, true).query;
+  		const txt = q.year + " " + q.month;
+  		res.end(txt);
+	}).listen(8080);
+
+
+
+http-module.js :
+
+
+const http = require('http');
+
+const port = process.env.PORT || 3000;
+
+const server = http.createServer((req, res) => {
+
+    console.log(req)
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html')
+    res.end('<h1> its me,hi, i am the problem, its me</h1> <p> Anti-Hero by Taylor Swift </p>');
+
+
+})
+
+server.listen(port, ()=> {
+
+    console.log(`Server is listening on port ${port}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
