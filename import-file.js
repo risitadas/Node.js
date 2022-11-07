@@ -3,7 +3,7 @@
 august = {
     name : "August",
     age : 1,
-    species : "cat",
+    species : "cat", 
     meow : true
 }
 
