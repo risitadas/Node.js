@@ -1,0 +1,1 @@
+This is a file demonstrating the "read files" in Node.js File System Module

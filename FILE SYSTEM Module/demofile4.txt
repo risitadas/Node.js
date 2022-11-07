@@ -1,0 +1,1 @@
+This is a file demonstrating the "create files using fs.writeFile()" in Node.js File System Module
